@@ -1,0 +1,352 @@
+{
+  "pred_file": "test__ocr_llm__qwen2.5-7b__v1.jsonl",
+  "method": "Each wrong field / unmatched item is attributed by checking whether the gold amount (digits) appears in the OCR text and what the model returned; see scripts/error_analysis.py.",
+  "buckets": [
+    {
+      "bucket": "ocr",
+      "count": 10,
+      "description": "Scalar wrong because the gold amount is not in the OCR text (misread digits, lost line).",
+      "examples": [
+        {
+          "id": "test_013",
+          "field": "subtotal",
+          "gold": "46.636",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "test_013",
+          "field": "tax",
+          "gold": "4.664",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "test_013",
+          "field": "total",
+          "gold": "51.300",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "test_014",
+          "field": "total",
+          "gold": "281,435",
+          "pred_raw": "28435",
+          "pred": 28435.0
+        },
+        {
+          "id": "test_020",
+          "field": "subtotal",
+          "gold": "325,600",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "test_020",
+          "field": "tax",
+          "gold": "34,351",
+          "pred_raw": null,
+          "pred": null
+        }
+      ]
+    },
+    {
+      "bucket": "missed",
+      "count": 29,
+      "description": "Scalar present in the OCR text but the model returned null.",
+      "examples": [
+        {
+          "id": "test_003",
+          "field": "subtotal",
+          "gold": "11,000",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "test_005",
+          "field": "tax",
+          "gold": "2.818",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "test_010",
+          "field": "subtotal",
+          "gold": "17,000",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "test_019",
+          "field": "subtotal",
+          "gold": "160000",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "test_030",
+          "field": "subtotal",
+          "gold": "28,636",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "test_030",
+          "field": "tax",
+          "gold": "2,864",
+          "pred_raw": null,
+          "pred": null
+        }
+      ]
+    },
+    {
+      "bucket": "wrong_value",
+      "count": 2,
+      "description": "Scalar present in the OCR text but the model picked another number (e.g. cash instead of total).",
+      "examples": [
+        {
+          "id": "test_068",
+          "field": "total",
+          "gold": "20,000",
+          "pred_raw": "50,000",
+          "pred": 50000.0
+        },
+        {
+          "id": "test_089",
+          "field": "total",
+          "gold": "40,000",
+          "pred_raw": "48.888",
+          "pred": 48888.0
+        }
+      ]
+    },
+    {
+      "bucket": "spurious",
+      "count": 6,
+      "description": "Model returned a value for a field the gold leaves empty.",
+      "examples": [
+        {
+          "id": "test_018",
+          "field": "subtotal",
+          "gold": null,
+          "pred_raw": "156000",
+          "pred": 156000.0
+        },
+        {
+          "id": "test_037",
+          "field": "total",
+          "gold": null,
+          "pred_raw": "20.000",
+          "pred": 20000.0
+        },
+        {
+          "id": "test_039",
+          "field": "total",
+          "gold": null,
+          "pred_raw": "777.600",
+          "pred": 777600.0
+        },
+        {
+          "id": "test_057",
+          "field": "total",
+          "gold": null,
+          "pred_raw": "42.000",
+          "pred": 42000.0
+        },
+        {
+          "id": "test_071",
+          "field": "subtotal",
+          "gold": null,
+          "pred_raw": "198000",
+          "pred": 198000.0
+        },
+        {
+          "id": "test_076",
+          "field": "total",
+          "gold": null,
+          "pred_raw": "110000",
+          "pred": 110000.0
+        }
+      ]
+    },
+    {
+      "bucket": "normalisation",
+      "count": 0,
+      "description": "Model copied the right string but number parsing changed it.",
+      "examples": []
+    },
+    {
+      "bucket": "item_ocr",
+      "count": 18,
+      "description": "Gold item missed; its price or name is not readable in the OCR text.",
+      "examples": [
+        {
+          "id": "test_013",
+          "field": "item",
+          "gold": "BASO KUAH = 43636.0",
+          "pred": null
+        },
+        {
+          "id": "test_013",
+          "field": "item",
+          "gold": "A.MINERAL GELAS = 3000.0",
+          "pred": null
+        },
+        {
+          "id": "test_014",
+          "field": "item",
+          "gold": "Mushroom Soup = 35000.0",
+          "pred": null
+        },
+        {
+          "id": "test_019",
+          "field": "item",
+          "gold": "AMBUSH CHS BUR = 100000.0",
+          "pred": null
+        },
+        {
+          "id": "test_020",
+          "field": "item",
+          "gold": "cashew nuts chkn = 64500.0",
+          "pred": "cashew nuts chkn = None"
+        },
+        {
+          "id": "test_020",
+          "field": "item",
+          "gold": "garlic pepper beef = 79500.0",
+          "pred": "garlic pepper beef = None"
+        }
+      ]
+    },
+    {
+      "bucket": "item_missed",
+      "count": 15,
+      "description": "Gold item missed although its name and price are in the OCR text.",
+      "examples": [
+        {
+          "id": "test_002",
+          "field": "item",
+          "gold": "JASMINE MT ( L ) = 24000.0",
+          "pred": null
+        },
+        {
+          "id": "test_005",
+          "field": "item",
+          "gold": "TRAD KY TOAST CARTE = 28182.0",
+          "pred": null
+        },
+        {
+          "id": "test_007",
+          "field": "item",
+          "gold": "Kupon 15 = 100000.0",
+          "pred": null
+        },
+        {
+          "id": "test_012",
+          "field": "item",
+          "gold": "SHOPPING BAG = 0.0",
+          "pred": null
+        },
+        {
+          "id": "test_017",
+          "field": "item",
+          "gold": "Cheese Croquette = 14000.0",
+          "pred": null
+        },
+        {
+          "id": "test_017",
+          "field": "item",
+          "gold": "Plastik Amook = 0.0",
+          "pred": null
+        }
+      ]
+    },
+    {
+      "bucket": "item_price_only",
+      "count": 18,
+      "description": "Item found by name but with a different line total.",
+      "examples": [
+        {
+          "id": "test_004",
+          "field": "item",
+          "gold": "AVOCADO COFFEE = 61000.0",
+          "pred": "AVOCADD COFFEE = 1281000.0"
+        },
+        {
+          "id": "test_012",
+          "field": "item",
+          "gold": "BLUS WANITA = 120000.0",
+          "pred": "BLUS WANITA = 8120000.0"
+        },
+        {
+          "id": "test_019",
+          "field": "item",
+          "gold": "AMBUSH DBL CHS = 60000.0",
+          "pred": "AMBUSH DBL CHS = 240000.0"
+        },
+        {
+          "id": "test_021",
+          "field": "item",
+          "gold": "NASI GOR SFD TLR = 35000.0",
+          "pred": "NASI GOR SFD TLR = 135000.0"
+        },
+        {
+          "id": "test_021",
+          "field": "item",
+          "gold": "ES TEH TAWAR = 3000.0",
+          "pred": "ES TEH TAWAR = 13000.0"
+        },
+        {
+          "id": "test_023",
+          "field": "item",
+          "gold": "TWIST DONUT = 54000.0",
+          "pred": "6 TWIST DONUT = 324000.0"
+        }
+      ]
+    },
+    {
+      "bucket": "item_extra",
+      "count": 39,
+      "description": "Predicted item with no gold partner (modifier listed as item, split/merged lines, non-item line).",
+      "examples": [
+        {
+          "id": "test_002",
+          "field": "item",
+          "gold": null,
+          "pred": "UCONUT JELLY (L) = 4000.0"
+        },
+        {
+          "id": "test_003",
+          "field": "item",
+          "gold": null,
+          "pred": "1X   @11000 = 11000.0"
+        },
+        {
+          "id": "test_005",
+          "field": "item",
+          "gold": null,
+          "pred": "ITEMS = None"
+        },
+        {
+          "id": "test_007",
+          "field": "item",
+          "gold": null,
+          "pred": "AO CCKNC CBOX = 100909.0"
+        },
+        {
+          "id": "test_008",
+          "field": "item",
+          "gold": null,
+          "pred": "COOKIE DOH SAUCES = 0.0"
+        },
+        {
+          "id": "test_008",
+          "field": "item",
+          "gold": null,
+          "pred": "NATA DE COCO = 0.0"
+        }
+      ]
+    }
+  ]
+}

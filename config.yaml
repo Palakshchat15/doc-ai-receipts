@@ -1,0 +1,51 @@
+# Single config for the Document AI (receipts -> validated JSON) project.
+# Paths are relative to the project root (the folder containing this file).
+
+paths:
+  raw: data/raw              # CORD parquet files (as downloaded)
+  images: data/images        # one JPEG per receipt: <split>_<idx>.jpg
+  gold: data/gold            # gold JSON in our schema: <split>.jsonl
+  ocr: data/ocr              # OCR boxes + lines: <split>.jsonl
+  results: results
+  preds: results/preds       # per-system per-receipt predictions (JSONL, resumable)
+  traces_db: data/traces.db
+  reviews_db: data/reviews.db
+  cache: data/cache
+
+data:
+  repo: naver-clova-ix/cord-v2
+  revision: 7f0115a4b758a71d6473b8d085751692da2fef98   # pinned HF commit
+  licence: CC BY 4.0
+  dev_split: validation      # CORD validation = our dev (tuning)
+  test_split: test           # CORD test = our test (reported numbers)
+
+ocr:
+  engine: rapidocr           # rapidocr 3.x, PP-OCR models in ONNX, CPU
+  threads: 4                 # onnxruntime intra-op threads (fixed so OCR latency is comparable; batch OCR
+                             # only while holding ..\.llm_lock, which covers all CPU-heavy batch jobs)
+  max_side: 1600             # images are downscaled so the long side is at most this (speed)
+  line_y_overlap: 0.5        # two boxes share a line if their vertical overlap >= this x min height
+
+llm:
+  base_url: http://127.0.0.1:11434   # not localhost: on Windows it adds ~2 s per request (IPv6 first)
+  model: qwen2.5:7b          # the app's extraction model; switch to qwen2.5:3b on a small laptop
+  models_evaluated: [qwen2.5:7b, qwen2.5:3b]
+  vision_model: qwen2.5vl:3b
+  temperature: 0
+  seed: 42
+  num_ctx: 4096
+  num_predict: 1024
+  request_timeout_s: 900
+  keep_alive: 10m
+
+validation:
+  # Money tolerances. CORD is mostly Indonesian rupiah (no decimals), so an absolute
+  # tolerance of 1 unit plus a small relative tolerance absorbs rounding.
+  abs_tol: 1.0
+  rel_tol: 0.005
+  # Routing: a receipt is auto-approved only if its confidence >= this.
+  # Chosen on dev (see results/routing_dev.csv).
+  approve_threshold: 1.0
+
+eval:
+  item_name_threshold: 0.6   # min normalised name similarity (0-1) for a predicted item to match a gold item

@@ -1,0 +1,11 @@
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "dark"
+
+[client]
+toolbarMode = "viewer"   # hides the developer toolbar and its pop-ups during demos

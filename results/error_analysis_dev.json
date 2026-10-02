@@ -1,0 +1,324 @@
+{
+  "pred_file": "dev__ocr_llm__qwen2.5-7b__v1.jsonl",
+  "method": "Each wrong field / unmatched item is attributed by checking whether the gold amount (digits) appears in the OCR text and what the model returned; see scripts/error_analysis.py.",
+  "buckets": [
+    {
+      "bucket": "ocr",
+      "count": 7,
+      "description": "Scalar wrong because the gold amount is not in the OCR text (misread digits, lost line).",
+      "examples": [
+        {
+          "id": "validation_005",
+          "field": "total",
+          "gold": "8,000",
+          "pred_raw": "7,273",
+          "pred": 7273.0
+        },
+        {
+          "id": "validation_007",
+          "field": "total",
+          "gold": "59,500",
+          "pred_raw": "9050",
+          "pred": 9050.0
+        },
+        {
+          "id": "validation_065",
+          "field": "subtotal",
+          "gold": "49.636",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "validation_067",
+          "field": "tax",
+          "gold": "6,909",
+          "pred_raw": "6069",
+          "pred": 6069.0
+        },
+        {
+          "id": "validation_067",
+          "field": "total",
+          "gold": "76,000",
+          "pred_raw": "00000",
+          "pred": 0.0
+        },
+        {
+          "id": "validation_070",
+          "field": "total",
+          "gold": "121,798",
+          "pred_raw": "121,768",
+          "pred": 121768.0
+        }
+      ]
+    },
+    {
+      "bucket": "missed",
+      "count": 35,
+      "description": "Scalar present in the OCR text but the model returned null.",
+      "examples": [
+        {
+          "id": "validation_002",
+          "field": "subtotal",
+          "gold": "18,181",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "validation_002",
+          "field": "tax",
+          "gold": "1,818",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "validation_003",
+          "field": "tax",
+          "gold": "0",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "validation_004",
+          "field": "subtotal",
+          "gold": "41,000",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "validation_005",
+          "field": "subtotal",
+          "gold": "7,273",
+          "pred_raw": null,
+          "pred": null
+        },
+        {
+          "id": "validation_020",
+          "field": "tax",
+          "gold": "1,500",
+          "pred_raw": null,
+          "pred": null
+        }
+      ]
+    },
+    {
+      "bucket": "wrong_value",
+      "count": 3,
+      "description": "Scalar present in the OCR text but the model picked another number (e.g. cash instead of total).",
+      "examples": [
+        {
+          "id": "validation_022",
+          "field": "total",
+          "gold": "308,000",
+          "pred_raw": "800,000",
+          "pred": 800000.0
+        },
+        {
+          "id": "validation_038",
+          "field": "total",
+          "gold": "20,000",
+          "pred_raw": "620,000",
+          "pred": 620000.0
+        },
+        {
+          "id": "validation_070",
+          "field": "service_charge",
+          "gold": "7,725",
+          "pred_raw": "11,073",
+          "pred": 11073.0
+        }
+      ]
+    },
+    {
+      "bucket": "spurious",
+      "count": 1,
+      "description": "Model returned a value for a field the gold leaves empty.",
+      "examples": [
+        {
+          "id": "validation_049",
+          "field": "total",
+          "gold": null,
+          "pred_raw": "81.400",
+          "pred": 81400.0
+        }
+      ]
+    },
+    {
+      "bucket": "normalisation",
+      "count": 0,
+      "description": "Model copied the right string but number parsing changed it.",
+      "examples": []
+    },
+    {
+      "bucket": "item_ocr",
+      "count": 16,
+      "description": "Gold item missed; its price or name is not readable in the OCR text.",
+      "examples": [
+        {
+          "id": "validation_005",
+          "field": "item",
+          "gold": "LE MINERAL = 8000.0",
+          "pred": null
+        },
+        {
+          "id": "validation_025",
+          "field": "item",
+          "gold": "Leng Hong Kien = 30000.0",
+          "pred": "1Prs Leng Hong Kien = 3000.0"
+        },
+        {
+          "id": "validation_025",
+          "field": "item",
+          "gold": "Mie Trsi Kgkung = 35500.0",
+          "pred": null
+        },
+        {
+          "id": "validation_041",
+          "field": "item",
+          "gold": "U SEOL = 390000.0",
+          "pred": null
+        },
+        {
+          "id": "validation_062",
+          "field": "item",
+          "gold": "Milo = 9091.0",
+          "pred": "Milo = 1606.0"
+        },
+        {
+          "id": "validation_063",
+          "field": "item",
+          "gold": "ISI CAMPUR = 43636.0",
+          "pred": null
+        }
+      ]
+    },
+    {
+      "bucket": "item_missed",
+      "count": 13,
+      "description": "Gold item missed although its name and price are in the OCR text.",
+      "examples": [
+        {
+          "id": "validation_016",
+          "field": "item",
+          "gold": "TT = 20000.0",
+          "pred": null
+        },
+        {
+          "id": "validation_021",
+          "field": "item",
+          "gold": "Discount BCA 15% = 34363.0",
+          "pred": null
+        },
+        {
+          "id": "validation_037",
+          "field": "item",
+          "gold": "- = 50000.0",
+          "pred": null
+        },
+        {
+          "id": "validation_038",
+          "field": "item",
+          "gold": "TT = 20000.0",
+          "pred": null
+        },
+        {
+          "id": "validation_041",
+          "field": "item",
+          "gold": "U SAM GYEOP = 0.0",
+          "pred": null
+        },
+        {
+          "id": "validation_041",
+          "field": "item",
+          "gold": "ICE COFFE MIX = 0.0",
+          "pred": null
+        }
+      ]
+    },
+    {
+      "bucket": "item_price_only",
+      "count": 10,
+      "description": "Item found by name but with a different line total.",
+      "examples": [
+        {
+          "id": "validation_010",
+          "field": "item",
+          "gold": "Serbu 1 = 40000.0",
+          "pred": "Serbu = 80000.0"
+        },
+        {
+          "id": "validation_010",
+          "field": "item",
+          "gold": "Choco Peanut Bread = 20000.0",
+          "pred": "Choco Peanut Bread = 40000.0"
+        },
+        {
+          "id": "validation_020",
+          "field": "item",
+          "gold": "JAMUR = 10000.0",
+          "pred": "JAMUR = 20000.0"
+        },
+        {
+          "id": "validation_034",
+          "field": "item",
+          "gold": "ORIGINAL BREWED TEA = 46000.0",
+          "pred": "ORIGINAL BREWED TEA = 92000.0"
+        },
+        {
+          "id": "validation_041",
+          "field": "item",
+          "gold": "GONG GIBAB = 105000.0",
+          "pred": "GONG GIBAB = 735000.0"
+        },
+        {
+          "id": "validation_045",
+          "field": "item",
+          "gold": "Earl Gray Tea = 35000.0",
+          "pred": "Earl Gray Tea = 25000.0"
+        }
+      ]
+    },
+    {
+      "bucket": "item_extra",
+      "count": 47,
+      "description": "Predicted item with no gold partner (modifier listed as item, split/merged lines, non-item line).",
+      "examples": [
+        {
+          "id": "validation_008",
+          "field": "item",
+          "gold": null,
+          "pred": "3X   @6500 = 19500.0"
+        },
+        {
+          "id": "validation_008",
+          "field": "item",
+          "gold": null,
+          "pred": "DISC ITEM = 7800.0"
+        },
+        {
+          "id": "validation_008",
+          "field": "item",
+          "gold": null,
+          "pred": "1X   @0 = 0.0"
+        },
+        {
+          "id": "validation_022",
+          "field": "item",
+          "gold": null,
+          "pred": "Free Mini Candle = None"
+        },
+        {
+          "id": "validation_022",
+          "field": "item",
+          "gold": null,
+          "pred": "Large Box = None"
+        },
+        {
+          "id": "validation_025",
+          "field": "item",
+          "gold": null,
+          "pred": "1Prs Mie Kgkung Trsi = 35500.0"
+        }
+      ]
+    }
+  ]
+}

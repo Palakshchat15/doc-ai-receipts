@@ -1,0 +1,123 @@
+bucket,id,field,gold,pred_raw,pred
+missed,validation_004,subtotal,"41,000",,
+missed,validation_004,total,"41,000",,
+item_missed,validation_004,item,BBQ Chicken = 41000.0,,
+item_extra,validation_004,item,,,Sedang = 41000.0
+missed,validation_005,subtotal,"7,273",,
+ocr,validation_005,total,"8,000",,8.0
+item_ocr,validation_005,item,LE MINERAL = 8000.0,,LE MINERAL = 8.0
+item_extra,validation_005,item,,,NETI AMT = 7273.0
+ocr,validation_007,total,"59,500",,9050.0
+item_extra,validation_007,item,,,CP = 9545.0
+item_extra,validation_008,item,,,DISC ITEM = 40000.0
+item_extra,validation_008,item,,,AMOUNT = 7800.0
+missed,validation_011,tax,8.100,,
+item_missed,validation_014,item,Arem Arem = 24000.0,,
+item_missed,validation_014,item,Kroket = 12000.0,,
+item_missed,validation_015,item,Arem Arem = 24000.0,,
+item_missed,validation_015,item,Pepenero Pastel = 30000.0,,
+item_price_only,validation_017,item,LEMONADE 16OZ = 20000.0,,LEMONADE = 16.0
+item_price_only,validation_018,item,beef C roll 3pcs = 10000.0,,beef c roll = 3.0
+item_missed,validation_018,item,kaya bred = 15000.0,,
+item_missed,validation_019,item,FUTAMI 17 GREEN TEA (CLAS = 12500.0,,
+item_extra,validation_019,item,,,FUTAMI = 12500.0
+missed,validation_021,subtotal,"Rp 194,726",,
+missed,validation_021,service_charge,"Rp 9,736",,
+wrong_value,validation_021,total,"Rp 224,908",,194726.0
+wrong_value,validation_022,total,"308,000",,800.0
+item_extra,validation_022,item,,,Free Mini Candle = 5.0
+item_extra,validation_022,item,,,Large Bo = 1.0
+item_missed,validation_025,item,Sop Sui Jiao = 33000.0,,
+item_missed,validation_025,item,Ha Kaou Udng = 28000.0,,
+item_missed,validation_025,item,Sio May Kpting = 23500.0,,
+item_missed,validation_025,item,Siomay Kmbinasi = 23000.0,,
+item_ocr,validation_025,item,Leng Hong Kien = 30000.0,,
+item_ocr,validation_025,item,Mie Trsi Kgkung = 35500.0,,
+item_missed,validation_025,item,Es Teh Tawar = 7000.0,,
+item_missed,validation_026,item,NASI MERAH/PUTIH = 5000.0,,
+item_missed,validation_026,item,SAYUR = 8000.0,,
+item_missed,validation_026,item,KERUPUK/SAMBEL = 2000.0,,
+item_missed,validation_026,item,AYAM = 14000.0,,
+item_missed,validation_026,item,MINUMAN KEMASAN/REFILL = 6000.0,,
+item_missed,validation_027,item,THAI ICED TEA (L) = 16363.0,,
+item_missed,validation_028,item,ELEPHANT READ BEAN = 12000.0,,
+item_missed,validation_028,item,chapsal twister donnut = 10000.0,,
+item_missed,validation_029,item,Sabun Beras = 30000.0,,
+missed,validation_034,service_charge,"14,580",,
+item_extra,validation_034,item,,,SUBTTL = 243000.0
+item_extra,validation_034,item,,,SUC CHG = 14580.0
+item_extra,validation_035,item,,,SUBTTL = 261000.0
+item_extra,validation_035,item,,,SVC CHG = 15660.0
+missed,validation_036,subtotal,"17,272",,
+item_extra,validation_036,item,,,Suooas = 17272.0
+missed,validation_037,subtotal,"63,636",,
+item_missed,validation_037,item,- = 50000.0,,
+item_extra,validation_037,item,,,byruar -  Ruar = 50000.0
+item_extra,validation_037,item,,,Setotnn = 63636.0
+item_ocr,validation_041,item,U SEOL = 390000.0,,
+item_missed,validation_041,item,U SAM GYEOP = 0.0,,
+item_missed,validation_042,item,STIX CINNAMON = 19000.0,,
+item_missed,validation_042,item,CINNAMON SUGAR = 17000.0,,
+item_missed,validation_042,item,TRIPPLE CHEESE = 17000.0,,
+item_missed,validation_044,item,THAI ICED TEA (L) = 16363.0,,
+item_price_only,validation_045,item,Earl Gray Tea = 35000.0,,Earl Gray Tea = 25000.0
+item_price_only,validation_045,item,Hot Tea = 25000.0,,Hot Tea = 1.0
+item_missed,validation_046,item,MARBLE CASTELA = 22000.0,,
+missed,validation_047,subtotal,"42,000",,
+item_extra,validation_047,item,,,Sedang = 0.0
+item_extra,validation_047,item,,,ITEMS = 42000.0
+missed,validation_048,tax,"5,592",,
+item_missed,validation_048,item,SB 1 OR = 28636.0,,
+item_extra,validation_048,item,,,SB = 28636.0
+item_missed,validation_049,item,Nasi CampurBali = 52000.0,,
+item_missed,validation_049,item,Lemon = 22000.0,,
+item_extra,validation_049,item,,,SubTTL = 74000.0
+item_missed,validation_051,item,Round Wagyu (1gr) = 47200.0,,
+item_extra,validation_053,item,,,*Rhum = 0.0
+item_extra,validation_053,item,,,*Plastik kcl = 0.0
+item_missed,validation_054,item,4003-Blueberry Fuji = 40000.0,,
+item_missed,validation_054,item,6001-Plastic Bag Small = 0.0,,
+item_extra,validation_055,item,,,BCA PAY... ( = 60000.0
+missed,validation_057,service_charge,"14,850",,
+item_extra,validation_057,item,,,SUBTTL = 247500.0
+item_extra,validation_057,item,,,SUC CHG = 14850.0
+missed,validation_059,subtotal,"561,800",,
+item_extra,validation_059,item,,,ITEMS = 561800.0
+item_extra,validation_059,item,,,Service charge = 42135.0
+item_missed,validation_061,item,Populaire Chocolate = 4500.0,,
+item_missed,validation_061,item,Paddle Pop Choco Magma = 3000.0,,
+item_ocr,validation_062,item,Milo = 9091.0,,Milo = 1606.0
+missed,validation_063,subtotal,"51,636",,
+missed,validation_063,total,"56,800",,
+item_ocr,validation_063,item,ISI CAMPUR = 43636.0,,
+item_extra,validation_063,item,,,TOTL = 51636.0
+ocr,validation_065,subtotal,49.636,,
+item_ocr,validation_065,item,NASI PUTIH = 6000.0,,
+item_extra,validation_065,item,,,NHTI ISTH = 6000.0
+missed,validation_066,total,"7,000",,
+item_extra,validation_066,item,,,TL = 7000.0
+ocr,validation_067,tax,"6,909",,6069.0
+ocr,validation_067,total,"76,000",,0.0
+item_extra,validation_067,item,,,BREAD N CHEESE DEL = 1.0
+item_extra,validation_067,item,,,MAC N CHEESE DEL = 1.0
+item_extra,validation_067,item,,,PEPSI DEL = 1.0
+item_extra,validation_067,item,,,P/P THUOSAND ISL DEL = 1.0
+item_extra,validation_067,item,,,LIPTON ICE TEA DEL = 1.0
+missed,validation_069,tax,15.908,,
+item_ocr,validation_069,item,SOTO MEDAN+NASI = 59500.0,,
+item_ocr,validation_069,item,GADO-GADO = 34500.0,,
+wrong_value,validation_070,tax,"11,073",,7725.0
+missed,validation_070,service_charge,"7,725",,
+ocr,validation_070,total,"121,798",,121768.0
+item_extra,validation_070,item,,,SUBTTAL = 103000.0
+item_extra,validation_071,item,,,Ice = 1000.0
+item_missed,validation_072,item,STIX CINNAMON = 19000.0,,
+item_missed,validation_072,item,TRIPPLE CHEESE = 17000.0,,
+item_missed,validation_074,item,THAI ICED TEA = 20000.0,,
+missed,validation_075,tax,"6,046",,
+item_ocr,validation_075,item,CHARGE TA = 909.0,,CHARGE TA = 606.0
+item_missed,validation_076,item,Enting2 Dua Bandeng Ori = 31000.0,,
+item_extra,validation_076,item,,,Enting = 31000.0
+item_extra,validation_076,item,,,QTY = 2.0
+ocr,validation_078,service_charge,7 700,,
+item_price_only,validation_079,item,Maling = 24000.0,,Maling = 2.0

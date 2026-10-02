@@ -1,0 +1,21 @@
+{
+  "repo": "naver-clova-ix/cord-v2",
+  "revision": "7f0115a4b758a71d6473b8d085751692da2fef98",
+  "licence": "CC BY 4.0",
+  "splits": {
+    "dev": {
+      "cord_split": "validation",
+      "n": 100,
+      "files": [
+        "data/validation-00000-of-00001-cc3c5779fe22e8ca.parquet"
+      ]
+    },
+    "test": {
+      "cord_split": "test",
+      "n": 100,
+      "files": [
+        "data/test-00000-of-00001-9c204eb3f4e11791.parquet"
+      ]
+    }
+  }
+}

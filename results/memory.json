@@ -1,0 +1,12 @@
+{
+  "measured": "2026-09-30, build laptop (16 GB, CPU only), psutil + Ollama /api/ps",
+  "streamlit_app_rss_mb": 169,
+  "streamlit_app_private_mb": 492,
+  "streamlit_note": "Server process after rendering all 4 pages and one Extract (test_000, OCR + qwen2.5:7b). The Extract used the cached OCR for the test sample, so the OCR engine was not loaded in the app.",
+  "ocr_engine_rss_mb_separate_process": 111,
+  "ocr_process_rss_after_one_receipt_mb": 133,
+  "ocr_note": "Measured in a separate Python process: loading RapidOCR adds ~111 MB; an uploaded image would load it in the app too (estimated app total ~300 MB).",
+  "ollama_qwen2.5_7b_gib": 4.71,
+  "ollama_context_length": 4096,
+  "ollama_note": "Ollama /api/ps size for qwen2.5:7b Q4_K_M at num_ctx 4096, CPU (size_vram 0). qwen2.5:3b and qwen2.5vl:3b were not loaded during this check, so their memory was not measured."
+}

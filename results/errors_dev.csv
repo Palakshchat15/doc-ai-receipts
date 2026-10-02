@@ -1,0 +1,133 @@
+bucket,id,field,gold,pred_raw,pred
+missed,validation_002,subtotal,"18,181",,
+missed,validation_002,tax,"1,818",,
+missed,validation_003,tax,0,,
+missed,validation_004,subtotal,"41,000",,
+missed,validation_005,subtotal,"7,273",,
+ocr,validation_005,total,"8,000","7,273",7273.0
+item_ocr,validation_005,item,LE MINERAL = 8000.0,,
+ocr,validation_007,total,"59,500",9050,9050.0
+item_extra,validation_008,item,,,3X   @6500 = 19500.0
+item_extra,validation_008,item,,,DISC ITEM = 7800.0
+item_extra,validation_008,item,,,1X   @0 = 0.0
+item_price_only,validation_010,item,Serbu 1 = 40000.0,,Serbu = 80000.0
+item_price_only,validation_010,item,Choco Peanut Bread = 20000.0,,Choco Peanut Bread = 40000.0
+item_missed,validation_016,item,TT = 20000.0,,
+missed,validation_020,tax,"1,500",,
+item_price_only,validation_020,item,JAMUR = 10000.0,,JAMUR = 20000.0
+missed,validation_021,subtotal,"Rp 194,726",,
+missed,validation_021,tax,"Rp 20,446",,
+item_missed,validation_021,item,Discount BCA 15% = 34363.0,,
+wrong_value,validation_022,total,"308,000","800,000",800000.0
+item_extra,validation_022,item,,,Free Mini Candle = None
+item_extra,validation_022,item,,,Large Box = None
+missed,validation_025,service_charge,"9,000",,
+item_ocr,validation_025,item,Leng Hong Kien = 30000.0,,1Prs Leng Hong Kien = 3000.0
+item_ocr,validation_025,item,Mie Trsi Kgkung = 35500.0,,
+item_extra,validation_025,item,,,1Prs Mie Kgkung Trsi = 35500.0
+missed,validation_034,tax,"25,758",,
+item_price_only,validation_034,item,ORIGINAL BREWED TEA = 46000.0,,ORIGINAL BREWED TEA = 92000.0
+missed,validation_035,tax,"27,666",,
+missed,validation_036,subtotal,"17,272",,
+item_extra,validation_036,item,,,Top Oreo = 17272.0
+item_extra,validation_036,item,,,Top-Dreo = 17272.0
+item_extra,validation_036,item,,,Top Banana = 17272.0
+item_extra,validation_036,item,,,Suooas = 17272.0
+missed,validation_037,subtotal,"63,636",,
+item_missed,validation_037,item,- = 50000.0,,
+item_extra,validation_037,item,,,byruar - Ruar = 50000.0
+item_extra,validation_037,item,,,Setotnn = 63636.0
+wrong_value,validation_038,total,"20,000","620,000",620000.0
+item_missed,validation_038,item,TT = 20000.0,,
+missed,validation_040,service_charge,0,,
+item_price_only,validation_041,item,GONG GIBAB = 105000.0,,GONG GIBAB = 735000.0
+item_ocr,validation_041,item,U SEOL = 390000.0,,
+item_missed,validation_041,item,U SAM GYEOP = 0.0,,
+item_missed,validation_041,item,ICE COFFE MIX = 0.0,,
+item_missed,validation_041,item,ICE BLACK COFFE = 0.0,,
+item_extra,validation_041,item,,,DAK GALBI = None
+item_extra,validation_041,item,,,HWANGTAE = None
+item_extra,validation_041,item,,,SUNDUBU(TUKBEGI) = None
+item_price_only,validation_045,item,Earl Gray Tea = 35000.0,,Earl Gray Tea = 25000.0
+item_price_only,validation_045,item,Hot Tea = 25000.0,,Hot Tea = None
+item_missed,validation_046,item,MARBLE CASTELA = 22000.0,,
+item_extra,validation_046,item,,, = 22000.0
+missed,validation_047,subtotal,"42,000",,
+missed,validation_048,tax,"5,592",,
+spurious,validation_049,total,,81.400,81400.0
+item_missed,validation_054,item,6001-Plastic Bag Small = 0.0,,
+missed,validation_057,tax,"26,235",,
+missed,validation_059,subtotal,"561,800",,
+item_price_only,validation_059,item,XLB Org Pork 10x = 78000.0,,XLB Org Park 10x = 780000.0
+item_ocr,validation_062,item,Milo = 9091.0,,Milo = 1606.0
+missed,validation_063,subtotal,"51,636",,
+item_ocr,validation_063,item,ISI CAMPUR = 43636.0,,
+ocr,validation_065,subtotal,49.636,,
+missed,validation_065,tax,4.964,,
+item_ocr,validation_065,item,NASI PUTIH = 6000.0,,
+item_extra,validation_065,item,,,NHTI ISTH = 6000.0
+ocr,validation_067,tax,"6,909",6069,6069.0
+ocr,validation_067,total,"76,000",00000,0.0
+item_extra,validation_067,item,,,BREAD N CHEESE DEL = None
+item_extra,validation_067,item,,,MAC N CHEESE DEL = None
+item_extra,validation_067,item,,,PEPSI DEL = None
+item_extra,validation_067,item,,,P/P THUOSAND ISL DEL = None
+item_extra,validation_067,item,,,LIPTON ICE TEA DEL = None
+item_extra,validation_068,item,,,2X = 13000.0
+missed,validation_069,subtotal,151.500,,
+missed,validation_069,tax,15.908,,
+item_ocr,validation_069,item,SOTO MEDAN+NASI = 59500.0,,
+item_ocr,validation_069,item,GADO-GADO = 34500.0,,
+missed,validation_070,tax,"11,073",,
+wrong_value,validation_070,service_charge,"7,725","11,073",11073.0
+ocr,validation_070,total,"121,798","121,768",121768.0
+item_extra,validation_071,item,,,Ice = 1000.0
+missed,validation_073,total,"20,000",,
+item_missed,validation_073,item,ICED TT = 20000.0,,
+missed,validation_074,subtotal,20.000,,
+missed,validation_075,tax,"6,046",,
+item_price_only,validation_075,item,KFC Winger HC = 40000.0,,KFC Winger HC = 80000.0
+item_ocr,validation_075,item,CHARGE TA = 909.0,,
+missed,validation_077,subtotal,Rp 58000.00,,
+missed,validation_077,tax,Rp 5272.73,,
+item_price_only,validation_079,item,Maling = 24000.0,,Maling = 12000.0
+item_ocr,validation_081,item,MIX 4FUN CHOCOLATE = 19091.0,,MIX 4FUN CHOCOLATE = 190091.0
+item_ocr,validation_081,item,GREEN ITSODA PITCHER = 60909.0,,GREEN ITSODA PITCHER = 60609.0
+item_ocr,validation_081,item,SC/R GRILLED STEAK = 99091.0,,SC/R GRILLED STEAK = 160.66
+missed,validation_082,subtotal,35.000,,
+missed,validation_083,tax,0,,
+item_missed,validation_084,item,HAZELNUT CHOCO MT (R) = 24000.0,,
+item_extra,validation_084,item,,,PEARL (R) = 4000.0
+item_extra,validation_086,item,,,OVO0176 = 26000.0
+missed,validation_087,tax,0,,
+item_extra,validation_088,item,,,BREAD N CHEESE DEL = None
+item_extra,validation_088,item,,,TUNA DEL = None
+item_extra,validation_088,item,,,CRABSTICK FUSILLI DEL = None
+item_extra,validation_088,item,,,LEMON TEA HANGAT DEL = None
+item_extra,validation_088,item,,,BLACKCURRANT DEL = None
+item_extra,validation_088,item,,,SC/P THOUSAND IS DEL = None
+item_extra,validation_088,item,,,SCSC/P BBQ BEEF DEL = None
+item_extra,validation_088,item,,,CR/P BEEF MAYO DEL = None
+item_extra,validation_088,item,,,SUNRISE ITALIAN SODA = None
+item_extra,validation_088,item,,,SUNRISE ITALIAN SODA = None
+item_missed,validation_089,item,Plastic Bag Small = 0.0,,
+item_ocr,validation_091,item,K7 1217 = 39091.0,,
+item_extra,validation_091,item,,,ADD CHICKEN BOX = 40000.0
+missed,validation_092,tax,"2,091",,
+item_missed,validation_092,item,CHARGE TA = 909.0,,
+ocr,validation_093,tax,"15,636","15,650",15650.0
+item_ocr,validation_093,item,50% CHICKEN ROYAL = 18182.0,,
+item_extra,validation_093,item,,,BREAD N CHEESE DEL = None
+item_extra,validation_093,item,,,BREAD N CHEESE DEL = None
+item_extra,validation_093,item,,,CRABSTICK FUSILLI DEL = None
+item_extra,validation_093,item,,,LIME SQUASH DEL = None
+item_extra,validation_093,item,,,LIME SQUASH DEL = None
+item_extra,validation_093,item,,,TP UY ICY EL = None
+item_extra,validation_093,item,,,P/P THUOSAND ISL DEL = None
+item_extra,validation_093,item,,,P/P BEEF CORN = None
+item_extra,validation_093,item,,,SUNRISE ITALIAN SODA = None
+item_extra,validation_093,item,,,TSO N RCK ROYALL 1 LIPTON ICE TEA DEL = 18182.0
+missed,validation_094,subtotal,69.000,,
+missed,validation_095,tax,"2,700",,
+missed,validation_096,subtotal,"13,636",,
+item_ocr,validation_096,item,Choco Cheese = None,,Cno Cese = 13636.0

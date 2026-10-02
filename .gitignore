@@ -1,0 +1,16 @@
+# Environments, caches, local state
+.venv/
+__pycache__/
+.pytest_cache/
+.llm_lock
+*.db
+*.log
+*.out
+results/logs/
+logs/
+.env
+.env.*
+
+# CORD v2 parquet files and extracted images: re-created by scripts/prepare_data.py
+data/raw/
+data/images/
