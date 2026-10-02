@@ -145,8 +145,9 @@ comparison for vision):
 | gold OCR + 7B | - | 38.1 / 96.5 | 1.3 | 532 / 188 |
 
 **What it means**
-- **The 7B is the best overall system, but not on every field.** It wins on total (0.88 vs 0.80),
-  item F1, item count, whole-receipt exact match and auto-approve rate. The keyword regex is still
+- **The 7B is the best overall system, but not on every field.** It beats the regex baseline on total
+  (0.88 vs 0.80), item F1, item count, whole-receipt exact match and auto-approve rate (the 3B is
+  marginally higher on item count, 0.80 vs 0.78). The keyword regex is still
   better on subtotal and tax. Its exact-match rate among approved receipts (0.69) is also slightly
   above the 7B's (0.66), because it approves fewer receipts. With 100 receipts, differences of a
   few points are within noise.
@@ -157,7 +158,8 @@ comparison for vision):
 - **OCR costs about 7 points of total accuracy.** With CORD's own word annotations as perfect OCR,
   the same 7B and prompt reach 0.95 total and 0.843 item F1, up from 0.88 and 0.772.
 - **The 3B is half the latency but clearly worse.** It misses subtotals (0.61), and only 37% of its
-  approved receipts are exact. One 3B output was truncated and one failed the schema.
+  approved receipts are exact. One 3B output (test_094) hit the 1,024-token output limit, and the
+  cut-off JSON failed the schema.
 - **The vision 3B is the slowest and weakest here.** On the 30-receipt subset it scores 0.73 total
   and 0.13 exact, at about 2 minutes per receipt on CPU. It is a CPU result on a small subset, not a
   verdict on vision models.
@@ -275,7 +277,8 @@ error. Dev shows the same pattern: 35 missed, 7 OCR, 3 wrong value, 1 spurious, 
 - **CORD is one country's receipts** (Indonesian rupiah, mostly no decimals). Other number formats
   are handled by the normaliser but not measured.
 - **Store name and currency are not scored,** because CORD v2 has no labels for them. The model
-  sometimes invents a currency: on `test_000` the 7B returned "USD" for a rupiah receipt.
+  currency can be wrong: on `test_000` (a rupiah receipt) the 7B returned no currency, and the
+  `detect_currency()` fallback picked "USD" from a "$" in the OCR line "TOTAL DISC $ -60.000".
 - **The test set is small.** With 100 test receipts (30 for vision), differences of a few points
   between systems are within noise.
 - **The rules check arithmetic, not truth.** A receipt that misses a zero-priced item, or misreads two

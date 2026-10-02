@@ -44,7 +44,7 @@ validation:
   abs_tol: 1.0
   rel_tol: 0.005
   # Routing: a receipt is auto-approved only if its confidence >= this.
-  # Chosen on dev (see results/routing_dev.csv).
+  # Chosen on dev (see results/routing_curve_dev.csv).
   approve_threshold: 1.0
 
 eval:
